@@ -1,0 +1,45 @@
+.md-fab-bottom-right {
+  position: fixed !important;
+  right: 25px;
+  bottom: 25px;
+  size: 150px;
+  width: 60px;
+  height: 60px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  left: 200px;
+  right: 200px;
+}
+
+.topic {
+  text-align: center;
+}
+
+.auth.user {
+  color: green;
+}
+
+.mat-cell {
+  color: green;
+}
+
+#csv-button
+{
+  /* border-style: solid;
+   border-color: #000000;
+   margin: 120px;
+   top: 20%;*/
+  border-left-width:   5px;
+  border-left-style:   solid;
+  border-color: #0f3eff;
+  left: 125px;
+  top: 30px;
+  background-color: #d8d8d8;
+
+}
+
+

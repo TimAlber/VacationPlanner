@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <a [routerLink]="'/'" class="logo"> <h1>Vacation Planner</h1> </a>
+    <h1 class="palme"><i>🌴🌴🌴.🌴🌴🌴.🌴🌴.🌴</i></h1>
+    <span class="menu-spacer"></span>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <span style="font-size: 12px;"
+      >Here you can track, request and coordiante your vacation days</span
+    >
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="'/overview'"> Overview </a>
+      <a mat-list-item [routerLink]="'/add-vacation'"> Add Vacation</a>
+      <a mat-list-item [routerLink]="'/calendar'"> Calendar </a>
+      <a mat-list-item [routerLink]="'/your-stats'"> Your Stats </a>
+      <a
+        *ngIf="displayAdmin === true"
+        mat-list-item
+        [routerLink]="'/admin-area'"
+        style="color: red">
+        Admin Area
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <mat-spinner class="loader" *ngIf="displayProgressSpinner === true"></mat-spinner>
+      <router-outlet *ngIf="displayProgressSpinner === false"></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

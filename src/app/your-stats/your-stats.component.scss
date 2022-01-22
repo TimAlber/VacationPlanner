@@ -1,0 +1,29 @@
+.topic {
+  text-align: center;
+}
+
+.tabelle {
+  width: 100%;
+}
+
+.angularFireAuth {
+  color: green;
+}
+
+.pending {
+  .mat-cell {
+    color: darkorange;
+  }
+}
+
+.approved {
+  .mat-cell {
+    color: green;
+  }
+}
+
+.declined {
+  .mat-cell {
+    color: red;
+  }
+}

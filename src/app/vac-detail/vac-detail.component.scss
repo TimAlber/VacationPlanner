@@ -1,0 +1,42 @@
+.the-card {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 80%;
+  height: 80%;
+  top: 80px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.topic {
+  text-align: center;
+}
+
+/*#pdfdownload
+{
+float:right;*/
+
+.deleteBtn {
+  text-align: center;
+}
+
+.hint {
+  font-size: 12px;
+}

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f28fc0a9-d11a-49ed-a99e-e15cecb856f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/app/add-vacation/add-vacation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/add-vacation/add-vacation.component.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="fix/fix-csv-export" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProjectId" id="1QdLp3dSKQ9oDEtLdMNcv6ZZGg8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/functions" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/functions" />
+      <recent name="$PROJECT_DIR$/functions/lib" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/functions" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-package value="$PROJECT_DIR$/node_modules/protractor" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f28fc0a9-d11a-49ed-a99e-e15cecb856f4" name="Default Changelist" comment="" />
+      <created>1566893698486</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566893698486</updated>
+      <workItem from="1566893699865" duration="1460000" />
+      <workItem from="1566897770331" duration="843000" />
+      <workItem from="1566907110481" duration="2441000" />
+      <workItem from="1566910223807" duration="816000" />
+      <workItem from="1566911208205" duration="1578000" />
+      <workItem from="1566972896084" duration="1303000" />
+      <workItem from="1566976948606" duration="5667000" />
+      <workItem from="1566984844026" duration="1378000" />
+      <workItem from="1567422021449" duration="10289000" />
+      <workItem from="1567491715290" duration="17435000" />
+      <workItem from="1567578629528" duration="1332000" />
+      <workItem from="1567595754000" duration="4404000" />
+      <workItem from="1567664229589" duration="3459000" />
+      <workItem from="1567680978831" duration="365000" />
+      <workItem from="1567686642631" duration="467000" />
+      <workItem from="1567752871376" duration="20862000" />
+      <workItem from="1568009178490" duration="17812000" />
+      <workItem from="1568095455625" duration="189000" />
+      <workItem from="1568095665223" duration="18000" />
+      <workItem from="1568095710700" duration="16283000" />
+      <workItem from="1568182978797" duration="55000" />
+      <workItem from="1568183138516" duration="11070000" />
+      <workItem from="1568270468683" duration="654000" />
+      <workItem from="1568271222260" duration="7605000" />
+      <workItem from="1568290968556" duration="3806000" />
+      <workItem from="1568354668470" duration="4553000" />
+      <workItem from="1568364006770" duration="4402000" />
+      <workItem from="1568369106939" duration="2339000" />
+      <workItem from="1568613590060" duration="6000" />
+      <workItem from="1568615314933" duration="6829000" />
+      <workItem from="1568632669171" duration="8451000" />
+      <workItem from="1568704517271" duration="6658000" />
+      <workItem from="1568787801877" duration="11006000" />
+      <workItem from="1568873678802" duration="2136000" />
+      <workItem from="1568877821782" duration="16980000" />
+      <workItem from="1568959760543" duration="9068000" />
+      <workItem from="1568976778118" duration="6728000" />
+      <workItem from="1569220524132" duration="9799000" />
+      <workItem from="1569236047067" duration="6623000" />
+      <workItem from="1569308045801" duration="10805000" />
+      <workItem from="1569327270142" duration="1428000" />
+      <workItem from="1569329988324" duration="6436000" />
+      <workItem from="1569394743024" duration="7151000" />
+      <workItem from="1569477665666" duration="2682000" />
+      <workItem from="1569481257791" duration="11432000" />
+      <workItem from="1569563930277" duration="19136000" />
+      <workItem from="1569823839100" duration="18448000" />
+      <workItem from="1569909305479" duration="3900000" />
+      <workItem from="1569996230048" duration="15151000" />
+      <workItem from="1570172844082" duration="1926000" />
+      <workItem from="1570181429768" duration="6714000" />
+      <workItem from="1570196077842" duration="1000" />
+      <workItem from="1570361409319" duration="1022000" />
+      <workItem from="1570428458787" duration="190000" />
+      <workItem from="1570541051672" duration="1874000" />
+      <workItem from="1570601382813" duration="1562000" />
+      <workItem from="1570603543791" duration="9104000" />
+      <workItem from="1570687462177" duration="10000" />
+      <workItem from="1571131350008" duration="38000" />
+      <workItem from="1571737037798" duration="102000" />
+      <workItem from="1571737225522" duration="911000" />
+      <workItem from="1580662501634" duration="865000" />
+      <workItem from="1580724356929" duration="359000" />
+      <workItem from="1580745083909" duration="1320000" />
+      <workItem from="1580804551627" duration="8356000" />
+      <workItem from="1581320015958" duration="59000" />
+      <workItem from="1581320095194" duration="1000" />
+      <workItem from="1581502583140" duration="80000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/functions/src/index.js" />
+        <option value="$PROJECT_DIR$/functions/src/index.js" />
+        <option value="$PROJECT_DIR$/functions/src/index.js" />
+        <option value="$PROJECT_DIR$/node_modules/karma/config.tpl.js" />
+        <option value="$PROJECT_DIR$/node_modules/karma/config.tpl.js" />
+        <option value="$PROJECT_DIR$/node_modules/karma/config.tpl.js" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

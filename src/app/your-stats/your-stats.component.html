@@ -1,0 +1,200 @@
+<p class="topic">Here you can see your Statistics</p>
+
+<table class="tabelle">
+  <tr>
+    <th>
+      <div *ngIf="auth.user | async as user">
+        <h3 style="color:blue;">Name: {{ user.displayName }}</h3>
+        <p>Email: {{ user.email }}</p>
+        <p *ngIf="user.role === 'ADMIN'">Role: Supervisor</p>
+        <p *ngIf="user.role === 'USER'">Role: Employee</p>
+        <p *ngIf="user.partTime === true">You are a Part Time Worker</p>
+        <p *ngIf="user.partTime === false">You are a Full Time Worker</p>
+        <p>Your Vacation Entitlement: {{ user.vacdaystotal }} days</p>
+        <p>Already taken holidays: {{ user.vacdaystaken }} days</p>
+        <p>Holidays left: {{ user.vacdaystotal - user.vacdaystaken }} days</p>
+      </div>
+    </th>
+    <th>
+      <app-donut-chart></app-donut-chart>
+    </th>
+  </tr>
+</table>
+
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Pending Vacation Plans
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <table
+      style="width: 100%"
+      mat-table
+      [dataSource]="pdataSource"
+      class="mat-elevation-z8 pending"
+    >
+      <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.Name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Von">
+        <th mat-header-cell *matHeaderCellDef>From</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.von.seconds * 1000 | date: "dd.MM.yyyy" }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Bis">
+        <th mat-header-cell *matHeaderCellDef>To</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.bis.seconds * 1000 | date: "dd.MM.yyyy" }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Length">
+        <th mat-header-cell *matHeaderCellDef>Length</th>
+        <td mat-cell *matCellDef="let element">{{ element.diffdays }} days</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Description">
+        <th mat-header-cell *matHeaderCellDef>Description</th>
+        <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Details">
+        <th mat-header-cell *matHeaderCellDef>Details</th>
+        <td mat-cell *matCellDef="let element">
+          <a routerLink="/vacation-detail" [state]="{ vid: element.id }"
+            ><button mat-raised-button color="primary"
+                     matTooltip="show the details">Detail</button></a
+          >
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </mat-expansion-panel>
+  <mat-expansion-panel
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Approved Vacation Plans
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <table
+      style="width: 100%"
+      mat-table
+      [dataSource]="adataSource"
+      class="mat-elevation-z8 approved"
+    >
+      <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.Name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Von">
+        <th mat-header-cell *matHeaderCellDef>From</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.von.seconds * 1000 | date: "dd.MM.yyyy" }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Bis">
+        <th mat-header-cell *matHeaderCellDef>To</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.bis.seconds * 1000 | date: "dd.MM.yyyy" }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Length">
+        <th mat-header-cell *matHeaderCellDef>Length</th>
+        <td mat-cell *matCellDef="let element">{{ element.diffdays }} days</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Description">
+        <th mat-header-cell *matHeaderCellDef>Description</th>
+        <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Details">
+        <th mat-header-cell *matHeaderCellDef>Details</th>
+        <td mat-cell *matCellDef="let element">
+          <a routerLink="/vacation-detail" [state]="{ vid: element.id }"
+            ><button mat-raised-button color="primary"
+                     matTooltip="show the details">Detail</button></a
+          >
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Declined Vacation Plans
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <table
+      style="width: 100%"
+      mat-table
+      [dataSource]="ddataSource"
+      class="mat-elevation-z8 declined"
+    >
+      <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.Name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Von">
+        <th mat-header-cell *matHeaderCellDef>From</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.von.seconds * 1000 | date: "dd.MM.yyyy" }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Bis">
+        <th mat-header-cell *matHeaderCellDef>To</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.bis.seconds * 1000 | date: "dd.MM.yyyy" }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Length">
+        <th mat-header-cell *matHeaderCellDef>Length</th>
+        <td mat-cell *matCellDef="let element">{{ element.diffdays }} days</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Description">
+        <th mat-header-cell *matHeaderCellDef>Description</th>
+        <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Details">
+        <th mat-header-cell *matHeaderCellDef>Details</th>
+        <td mat-cell *matCellDef="let element">
+          <a routerLink="/vacation-detail" [state]="{ vid: element.id }"
+            ><button mat-raised-button color="primary"
+                     matTooltip="show the details">Detail</button></a
+          >
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </mat-expansion-panel>
+</mat-accordion>

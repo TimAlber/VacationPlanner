@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Hey new User</h1>
+<div mat-dialog-content>
+  <p>
+    Please enter whether you are a Part Time or Full Time Worker.<br />
+  </p>
+  <mat-form-field>
+    <select matNativeControl required [(ngModel)]="data.part">
+      <option value="full-time">Full Time</option>
+      <option value="part-time">Part Time</option>
+    </select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data.part" cdkFocusInitial>
+    Submit
+  </button>
+</div>

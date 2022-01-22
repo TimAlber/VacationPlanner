@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Hey Admin</h1>
+<div mat-dialog-content>
+  <p>
+    Please enter the vacation entitelment of this employee in days per year.<br />(Only
+    ever enter integers.)
+  </p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.days" />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data.days" cdkFocusInitial>
+    Submit
+  </button>
+</div>

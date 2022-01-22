@@ -1,0 +1,53 @@
+<div *ngIf="displayItemData">
+  <mat-icon matTooltip="Print Your Plan"
+            matTooltipPosition="right"
+    title="Print Screen"
+    alt="Print Screen"
+    onclick="window.print();"
+    target="_blank"
+    style="cursor:pointer;"
+    >print</mat-icon>
+  <mat-card class="the-card">
+    <p class="topic">Here you see one specific Vacation request in Detail.</p>
+    <table>
+      <tr>
+        <td>Name: {{ displayItemData.Name }}</td>
+        <td>Lenght: {{ displayItemData.diffdays }} days</td>
+      </tr>
+      <tr>
+        <td>Description: {{ displayItemData.description }}</td>
+        <td>Representative: {{ displayItemData.representative }}</td>
+      </tr>
+      <tr>
+        <td>State: {{ displayItemData.state }}</td>
+        <td>Last Project: {{ displayItemData.lastProject }}</td>
+      </tr>
+      <tr>
+        <td>
+          From: {{ displayItemData.von.seconds * 1000 | date: "dd.MM.yyyy" }}
+        </td>
+        <td>
+          To: {{ displayItemData.bis.seconds * 1000 | date: "dd.MM.yyyy" }}
+        </td>
+      </tr>
+      <tr *ngIf="displayItemData.daysDeduction !== 0">
+        <td>
+          This User is Part Time Worker
+        </td>
+        <td>
+          Deduction Days: {{ displayItemData.daysDeduction}} days
+        </td>
+      </tr>
+    </table>
+<!--    <br /><br /><br />-->
+<!--    <div class="deleteBtn" *ngIf="usersource.role == 'ADMIN'">-->
+<!--      <button mat-raised-button color="primary" (click)="deleteVac()">-->
+<!--        Delete this Vacation Plan-->
+<!--      </button>-->
+<!--      <p class="hint">-->
+<!--        You can only do this because you are an Admin.<br />Please think before-->
+<!--        you do this.<br />There is no undoing this.-->
+<!--      </p>-->
+<!--    </div>-->
+  </mat-card>
+</div>

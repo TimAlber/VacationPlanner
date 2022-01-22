@@ -1,0 +1,45 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <a id="feedback" href="mailto:azubis@syqlo.com" style="color: grey; font-size: 12px"
+       matTooltip="Give us your feedback">Give feedback here <mat-icon id="feedback1">feedback</mat-icon></a>
+    <div *ngIf="auth.user | async; then authenticated; else guest">
+      <!-- template will replace this div -->
+    </div>
+
+    <!-- User NOT logged in -->
+    <ng-template #guest>
+      <mat-card class="the-card">
+        <br />
+        <h3>Hello User, please use your official syqlo Google Account to Log In.</h3>
+        <p>Until you logged in, you wont be able to do anything.</p>
+
+        <button mat-raised-button color="primary" (click)="auth.googleLogin()">
+          Connect to Google
+        </button>
+      </mat-card>
+    </ng-template>
+
+    <!-- User logged in -->
+    <ng-template #authenticated>
+      <mat-card class="the-card">
+        <div *ngIf="auth.user | async as user">
+          <h3>Hello, {{ user.displayName }}</h3>
+          <p>Email: {{ user.email }}</p>
+          <div *ngIf="user.role === 'USER'">
+            <p>Role: Employee</p>
+          </div>
+          <div *ngIf="user.role === 'ADMIN'">
+            <p>Role: Supervisor</p>
+          </div>
+          <p>Your Vacation Entitlement: {{ user.vacdaystotal }} days</p>
+          <p>Already taken holidays: {{ user.vacdaystaken }} days</p>
+          <button mat-raised-button color="primary" (click)="auth.signOut()">
+            Logout
+          </button>
+        </div>
+      </mat-card>
+    </ng-template>
+  </body>
+</html>

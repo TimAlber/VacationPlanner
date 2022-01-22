@@ -1,0 +1,158 @@
+<br />
+<mat-card class="the-card" xmlns:mailto="http://www.w3.org/1999/xhtml">
+  <p class="topic">
+    Here you can add your Vacation Plans, so they can be submitted for review.
+  </p>
+
+  <div *ngIf="auth.user | async as user">
+    <p style="color: blue">
+      Vacation will be planned for: {{ user.displayName }}
+    </p>
+  </div>
+  <mat-form-field>
+    <textarea
+      required
+      matInput
+      placeholder="Description/ Reason"
+      [(ngModel)]="storedesk"
+    ></textarea>
+  </mat-form-field>
+  <br /><br />
+  <td id="hallo0">
+    <tr>
+      <mat-icon><i class="material-icons">flight_takeoff</i></mat-icon>
+      <mat-form-field>
+        <input
+          required
+          [(ngModel)]="the1"
+          matInput
+          [matDatepicker]="picker"
+          placeholder="Pick the 'from' date"
+          [min]="minDate"
+          (dateInput)="addFromEvent('input', $event)"
+        />
+
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </tr>
+  </td>
+
+  <td id="hallo1">
+    <tr>
+      <mat-icon><i class="material-icons">flight_land</i></mat-icon>
+      <mat-form-field>
+        <input
+          required
+          [(ngModel)]="the2"
+          matInput
+          [matDatepicker]="pickerto"
+          placeholder="Pick the 'to' date"
+          [min]="minDate"
+          (dateInput)="addToEvent('input', $event)"
+        />
+
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="pickerto"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #pickerto></mat-datepicker>
+      </mat-form-field>
+    </tr>
+  </td>
+
+  <div class="center">
+    <table class="tabelle">
+      <tr>
+        <td>
+          <div>
+            <td id="dietabelle">
+              <mat-form-field>
+                <label>
+                  <textarea
+                    [(ngModel)]="lastProject"
+                    matInput
+                    placeholder="Your last Project"
+                  ></textarea>
+                </label>
+              </mat-form-field>
+            </td>
+          </div>
+        </td>
+        <td id="dietabelle2">
+          <mat-form-field id="">
+            <br>
+            <br>
+
+            <mat-label>Choose a Representation Worker</mat-label>
+
+            <mat-select
+              [(ngModel)]="representative"
+              (selectionChange)="selectedSelect($event)">
+              <mat-option>None</mat-option>
+              <mat-option *ngFor="let user of displayUser" [value]="user.value">
+                {{ user.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <p>{{ representative }}</p>
+        </td>
+        <td>
+          <p></p>
+        </td>
+
+        <td></td>
+      </tr>
+    </table>
+
+    <br />
+    <div *ngIf="auth.user | async as user">
+    <div style="font-size: 48px; font-weight: bold;">{{ diffdays }} days</div>
+    <div style="font-size: 32px; font-weight: bold;" *ngIf="user.partTime">Part Time Deduction: {{ daysDeduction }} days</div>
+    <br><br>
+      ________________________________________________________________________
+      <p>
+        <u>Holidays left:</u>
+        {{ user.vacdaystotal + user.lastYearTime - user.vacdaystaken }} days
+      </p>
+      ________________________________________________________________________
+      <p>
+        <u>Already taken holidays:</u> {{ user.vacdaystaken }} days</p>
+      ________________________________________________________________________
+      <p>
+        <u>Your Vacation Entitlement:</u>
+        {{ user.vacdaystotal + user.lastYearTime }} days
+      </p>
+      ________________________________________________________________________
+      <p>
+        <u>Amount of days your current vacation would have:</u> {{ diffdays }} days
+      </p>
+      ________________________________________________________________________
+      <p>
+        <u>Amount of holidays you would have left after taking this vacation:</u>
+        {{
+          user.vacdaystotal + user.lastYearTime - user.vacdaystaken - diffdays
+        }}
+        days
+      </p>
+      <td></td>
+    </div>
+    <button
+      mat-raised-button
+      (click)="addPlan()"
+      color="primary"
+      [disabled]="!editmode ? 'disabled' : null"
+    >
+      Add Vacation Plan
+    </button>
+  </div>
+  <td>
+    <p style="float: left; font-size: 12px">
+    Part Time Deduction: 1 day equals 0.5 days
+    </p><br>
+    <p style="float: left; font-size: 12px">
+      * = required
+    </p>
+  </td>
+</mat-card>
